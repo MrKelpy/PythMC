@@ -132,7 +132,7 @@ The `Message` class holds any returning values coming from `ChatLink`. It has tw
     2. ID (An identifier used to distinguish between messages)
 ___
 ## Special Thanks to...
-To [SafeSurvival](https://minecraft-server-list.com/server/291843/), for being the testing ground for this project.
+To [SafeSurvival](https://minecraft-server-list.com/server/291843/), for being the testing ground for this project.<br>
 To Shaztopia, SafeSurvival's Owner, for allowing me to test `PythMC.Chat` there.
 ___
 ## Planned Features and Patches
