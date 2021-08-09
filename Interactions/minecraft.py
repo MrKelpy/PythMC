@@ -17,11 +17,11 @@ import keyboard
 from assets.essentials.interactor import Interactor
 
 
-class Controller(Interactor):
+class GameLink(Interactor):
 
     """
-    Represents the Minecraft Client. All the interactions performed within this class are *indirect*,
-    meaning that they perform actions as if it were a human, rather than actually "controlling" the client..
+    Used to perform physical actions in Minecraft. All the interactions performed within this class are *indirect*,
+    meaning that they perform actions as if it were a human, rather than actually "controlling" the client.
     """
 
 
@@ -29,8 +29,6 @@ class Controller(Interactor):
 
         super().__init__()
         self._default_mc_directory = os.path.join(os.getenv("APPDATA"), ".minecraft")
-        self.gui_scale = 3
-
 
     def attack(self, duration: int = 0, double: bool = False):
         """
@@ -109,7 +107,7 @@ class Controller(Interactor):
 
     def offhand(self):
         """
-        Switches the item to the offhand.
+        Switches to the offhand.
         Performs an "f" by default
         :return:
         """
@@ -117,12 +115,13 @@ class Controller(Interactor):
         self.activate_mc()
         self._perform(self.OFFHAND)
 
+
     def walk(self, direction: str = "fwd", blocks: int = 1, sprint: bool = False, jumping: bool = False):
         """
         Presses down the walk key for a specified direction, for x amount of blocks. Defaults to WASD.
         A Minecraft Player takes 0.232s to walk 1 block, so that is the base of the calculations.
 
-        :param jumping: Toggles walk/spring jumping.
+        :param jumping: Toggles walk/sprint jumping.
         :param sprint: It does exactly what you think it does.
         :param direction: string: fwd, bwd, left, up
         :param blocks: The amount of blocks to walk
@@ -142,3 +141,6 @@ class Controller(Interactor):
 
         if sprint: keyboard.release(self.SPRINT)  # Stops sprinting
         if jumping: keyboard.release(self.JUMP)  # Stops jumping
+
+    # Walk alias
+    go = walk

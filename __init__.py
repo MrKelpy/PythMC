@@ -6,7 +6,7 @@ __author__ = "Alexandre Silva // MrKelpy"
 __copyright__ = "© Alexandre Silva 2021"
 
 from Chat.minecraft import ChatLink
-from Interactions.minecraft import Controller
+from Interactions.minecraft import GameLink
 
 """
 PyMC Is a Python Library specialised in the creation of external minecraft scripts.

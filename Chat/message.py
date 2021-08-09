@@ -11,5 +11,4 @@ class Message:
 
         self.content = args[0]
         self.id = args[1]
-        self.date = args[2]
 

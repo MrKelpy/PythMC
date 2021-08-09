@@ -34,9 +34,8 @@ def parse_chat_messages(history: list, limit: int):
         if not message: continue
 
         line_number = history.index(line) + 1
-        date = line.split(" [")[0][1:-1]
 
-        requested_messages.append(Message(message, line_number, date))
+        requested_messages.append(Message(message, line_number))
         counter += 1
 
     if not requested_messages:

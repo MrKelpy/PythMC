@@ -21,7 +21,7 @@ from assets.essentials.interactor import Interactor
 class ChatLink(Interactor):
 
     """
-    Represents the Minecraft Chat. This class can interact directly with the in-game chat.
+    Used to interact with the Minecraft Chat.
     """
 
     def __init__(self):

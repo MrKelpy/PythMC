@@ -9,7 +9,6 @@ __copyright__ = "© Alexandre Silva 2021"
 class Keybinds:
 
     def __init__(self):
-
         # General Controls
         self.ATTACK = "left"  # Mouse left click
         self.USE = "right"  # Mouse right click
